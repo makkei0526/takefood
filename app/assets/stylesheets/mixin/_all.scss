@@ -1,0 +1,9 @@
+@mixin shadow_btn {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+  transform: translate(-2.5px, -2.5px);
+  &:hover{
+    box-shadow: none;
+    transform: none;
+    opacity: 0.7;
+  }
+}

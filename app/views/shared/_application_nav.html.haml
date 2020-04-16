@@ -1,0 +1,11 @@
+.masthead.clearfix
+  .inner
+    %h2 TakeFood
+    -# = link_to "TakeFood", root_path, class: "masthead-brand"
+      -# %h2 お店の方はこちら
+    %nav.nav.nav-masthead.app-nav
+      - if shop_signed_in?
+        = link_to "ログアウト", destroy_shop_session_path, method: :delete
+      - else
+        = link_to "新規登録", new_shop_registration_path
+        = link_to "ログイン", new_shop_session_path

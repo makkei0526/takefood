@@ -1,0 +1,57 @@
+-# = render "shared/application_nav"
+
+.contents.row
+  .container
+    %h2 お店を登録
+    = form_with model: @shop, url: shop_registration_path, id: 'new_shop', class: 'new_shop', local: true do |f|
+      = devise_error_messages!
+      .field
+        = f.label :メールアドレス
+        %br/
+        = f.email_field :email
+      .field
+        = f.label :パスワード
+        - if @validatable
+          %em
+            (#{@minimum_password_length} 文字以内)
+        %br/
+        = f.password_field :password, autocomplete: "off"
+      .field
+        = f.label :パスワード（確認）
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "off"
+      .field
+        = f.label :店舗名
+        %br/
+        = f.text_field :name
+      .field
+        = f.label :店の説明
+        %br/
+        = f.text_field :introduction
+      .field.image
+        = f.label 'お店の外観写真'
+        #img_field{onclick: "$('#file').click()"}
+          - if @shop.image.present?
+            = image_tag(@shop.image)
+          - else
+            %i.fas.fa-image
+            %i.fas.fa-file-upload.add
+        = f.file_field :image, class: "image", style: "display:none;", id: "file"
+      .field
+        = f.label :"住所"
+        %br/
+        = f.text_field :address,maxlength:30, placeholder:"例：東京都渋谷区神南町(30字以内）",maxlength:40
+      .field
+        = f.label :"地域"
+        %br/
+        = f.text_field :area,maxlength:10, placeholder:"例：渋谷"
+      .field
+        = f.label :営業時間
+        %br/
+        = f.text_field :shop_time,maxlength:20, placeholder:"例：AM9:00~PM10:00"
+      .field
+        = f.label :定休日
+        %br/
+        = f.text_field :shop_holiday,maxlength:10, placeholder:"例：日曜日"
+      .actions
+        = f.submit "登録",class: "devise__submit"

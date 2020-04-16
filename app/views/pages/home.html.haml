@@ -1,1 +1,15 @@
-%h1 こんにちは
+
+.site-wrapper
+  .site-wrapper-inner
+    .cover-container
+
+      #background
+      = render "shared/application_nav"
+      .inner.cover
+        %h1.cover-heading
+          食べたいあの料理
+          %br
+            テイクアウトやってるかも
+        %p.lead
+        %p.lead
+          = link_to "お店を登録する",  class: "btn btn-lg btn-secondary"
