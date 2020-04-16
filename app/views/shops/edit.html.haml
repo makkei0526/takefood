@@ -1,0 +1,39 @@
+.contents.row
+  .postform__ja
+    お店情報登録・更新
+  .container.editcontainer
+    = form_with model: @shop, id: 'new_shop', class: 'new_shop', local: true do |f|
+      .field
+        = f.label :"店名"
+        %br/
+        = f.text_field :name ,maxlength:20, placeholder:"例：お好み焼き店 渋谷１０１号店(20字以内）",maxlength:20
+      .field
+        = f.label :店の説明
+        %br/
+        = f.text_field :introduction  
+      .field.image
+        = f.label 'お店の外観写真'
+        #img_field{onclick: "$('#file').click()"}
+          - if @shop.image.url.present?
+            = image_tag(@shop.image.url)
+          - else
+            %i.fas.fa-image
+            %i.fas.fa-file-upload.add
+        = f.file_field :image, class: "image", style: "display:none;", id: "file"
+      .field
+        = f.label :"住所"
+        %br/
+        = f.text_field :address,maxlength:30, placeholder:"例：東京都渋谷区神南町(30字以内）",maxlength:40
+      .field
+        = f.label :"地域"
+        %br/
+        = f.text_field :area,maxlength:10, placeholder:"例：渋谷"
+      .field
+        = f.label :営業時間
+        %br/
+        = f.text_field :shop_time,maxlength:20, placeholder:"例：AM9:00~PM10:00"
+      .field
+        = f.label :定休日
+        %br/
+        = f.text_field :shop_holiday,maxlength:10, placeholder:"例：日曜日"
+        = f.submit "Update",class: "devise__submit"
