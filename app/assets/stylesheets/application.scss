@@ -1,5 +1,10 @@
+@import "reset";
 @import "bootstrap";
-
+@import "mixin/all";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "modules/devise";
+@import "modules/slick-theme";
 
 #background {
   position: fixed;
