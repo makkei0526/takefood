@@ -1,3 +1,6 @@
+.masthead.clearfix
+  .inner
+    = link_to "TakeFood", root_path, class: "masthead-brand"
 %h2 ログイン
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
