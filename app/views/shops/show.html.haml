@@ -1,0 +1,30 @@
+.shop
+  .shop__en
+    Information
+  .shop__ja
+    詳細情報
+  .shop__box
+    .shop__box--image
+      - if @shop.image.url
+        = image_tag @shop.image.url
+    .shop__box--contens
+      .shop__name.shop__content
+        = @shop.name
+      %hr
+      .shop__station.shop__content
+        = @shop.introduction
+      %hr
+      .shop__address.shop__content
+        = @shop.address
+      %hr
+      .shop__time.shop__content
+        営業時間：
+        = @shop.shop_time
+        %span.space
+        定休日：
+        = @shop.shop_holiday
+- if shop_signed_in? && current_shop.id == @shop.id
+  .content__btns
+    = link_to edit_shop_path(@shop.id) do
+      .content__btn
+        店舗情報を変更
