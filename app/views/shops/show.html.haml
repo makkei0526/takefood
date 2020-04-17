@@ -23,3 +23,8 @@
         %span.space
         定休日：
         = @shop.shop_holiday
+- if shop_signed_in? && current_shop.id == @shop.id
+  .content__btns
+    = link_to edit_shop_path(@shop.id) do
+      .content__btn
+        店舗情報を変更
