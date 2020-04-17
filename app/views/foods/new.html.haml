@@ -12,12 +12,12 @@
       .field
         = f.label :"値段（円）"
         %br/
-        = f.number_field  :stock,max:5000,min:1,class: "foodform__box--stock",placeholder: "値段を入力してください"
+        = f.text_field  :price,max:5000,min:1,class: "foodform__box--stock",placeholder: "値段を入力してください(円）"
       .field.image
         = f.label '料理画像'
         #img_field{onclick: "$('#file').click()"}
-          - if @food.image.present?
-            = image_tag(@food.image)
+          - if @food.image.url.present?
+            = image_tag(@food.image.url)
           - else
             %i.fas.fa-image
             %i.fas.fa-file-upload.add
