@@ -3,6 +3,7 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
+    @foods = @shop.foods.includes(:shop)
   end
 
   def edit

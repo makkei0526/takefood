@@ -1,0 +1,25 @@
+.foodform
+  .foodform__en
+    Add food
+  .foodform__ja
+    料理情報追加
+  .foodform__box
+    = form_with model:@food, local: true do |f|
+      .field
+        = f.label :"料理名"
+        %br/
+        = f.text_field :name,class: "foodform__box--name", placeholder:"例：自家製の 手作りパン ",maxlength:20
+      .field
+        = f.label :"値段（円）"
+        %br/
+        = f.text_field  :price,max:5000,min:1,class: "foodform__box--stock",placeholder: "値段を入力してください(円）"
+      .field.image
+        = f.label '料理画像'
+        #img_field{onclick: "$('#file').click()"}
+          - if @food.image.url.present?
+            = image_tag(@food.image.url)
+          - else
+            %i.fas.fa-image
+            %i.fas.fa-file-upload.add
+        = f.file_field :image, class: "image", style: "display:none;", id: "file"
+      = f.submit "Add food", class: "foodform__box--submit"
