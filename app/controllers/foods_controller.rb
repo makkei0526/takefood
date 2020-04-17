@@ -12,6 +12,12 @@ class FoodsController < ApplicationController
       redirect_to new_shop_food_path(@food.shop.id), notice: '全ての項目を入力してください。'
     end
   end
+
+  def destroy
+    food = Food.find(params[:id])
+    food.destroy
+  end
+
  
   private
   def food_params
