@@ -6,7 +6,9 @@
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    %link{ rel: "stylesheet", type: "text/css", href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"}
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{ type: "text/javascript", src: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
   %body
     = render 'layouts/notifications'
     %header
@@ -23,7 +25,7 @@
                 掲示板
             %li
               = link_to shops_path, class: "#" do
-                料理検索
+                飲食店検索
             %li
               = link_to root_path(anchor: "posts"), class: "#" do
                 テイクアウト最新情報
