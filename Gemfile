@@ -70,3 +70,4 @@ gem 'devise'
 gem "font-awesome-sass"
 gem 'carrierwave'
 gem 'fog'
+gem 'kaminari'
