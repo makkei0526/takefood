@@ -16,3 +16,23 @@
           = link_to "お店を登録する",  class: "btn btn-lg btn-secondary"
           = link_to "テイクアウト最新情報をみる", posts_path, class: "btn btn-lg btn-secondary"
 
+    .posts#posts
+      .posts__en
+        NEW POSTS
+      .posts__ja
+        %div
+          新着情報 
+        %div
+          クリックするとお店の詳細ページにいけます
+      .posts__box#postslick
+        - @posts.each do |post|
+          = link_to shop_path(post.shop.id),class:"newShop__hover" do
+            .newpost__box
+              %span.newpost__box--date
+                = post.created_at
+              %span.newpost__box--name
+                = post.shop.name
+              %hr/
+              .newpost__box--content
+                = post.content
+
