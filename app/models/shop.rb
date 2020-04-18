@@ -6,9 +6,17 @@ class Shop < ApplicationRecord
 
          mount_uploader :image, ImageUploader
 
-
+#アソシエーション
          has_many :foods
          has_many :posts
+
+         #バリデーション記述
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :introduction, presence: true
+  validates :area, presence: true
+  validates :shop_holiday, presence: true
+  validates :shop_time, presence: true
 
 
          def self.search(search)
