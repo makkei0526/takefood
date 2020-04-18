@@ -74,7 +74,7 @@ header{
 .topcontens{
   background-size: cover;
   height: 950px;
-  background-image: image-url("hand.jpg");
+  background-image: image-url("restaurant-766050.jpg");
   margin-top: 75px;
   background-position: center;
   &__logo{
@@ -138,7 +138,7 @@ header{
     &--left{
       height: 300px;
       width: 450px;
-      background-image: image-url("search.jpg");
+      background-image: image-url("tekuout.jpg");
       background-size: 100% 100%;
       position: relative;
       @include shadow_btn;
@@ -157,7 +157,7 @@ header{
     &--right{
       height: 300px;
       width: 450px;
-      background-image: image-url("shop.jpg");
+      background-image: image-url("picup.jpg");
       background-size: 100% 100%;
       position: relative;
       @include shadow_btn;
