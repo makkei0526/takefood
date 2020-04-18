@@ -1,0 +1,11 @@
+.posts__box#postslick
+  - @posts.each do |post|
+    = link_to shop_path(post.shop.id),class:"newShop__hover" do
+      .newpost__box
+        %span.newpost__box--date
+          = post.created_at
+        %span.newpost__box--name
+          = post.shop.name
+        %hr/
+        .newpost__box--content
+          = post.content

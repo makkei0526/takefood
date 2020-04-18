@@ -4,7 +4,7 @@
     .cover-container
 
       #background
-      = render "shared/application_nav"
+      
       .inner.cover
         %h1.cover-heading
           TakeFood
@@ -14,3 +14,5 @@
         %p.lead
         %p.lead
           = link_to "お店を登録する",  class: "btn btn-lg btn-secondary"
+          = link_to "テイクアウト最新情報をみる", posts_path, class: "btn btn-lg btn-secondary"
+
