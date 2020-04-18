@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :foods, only: [:create,:destroy]
   resources :posts, only: [:index,:create]
+  resources :comments, only: [:index,:create]
 
   resources :shops, only: [:index,:show,:edit,:update] do
     resources :posts, only: :new
