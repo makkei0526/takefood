@@ -20,18 +20,18 @@
                 駅から徒歩
                 -# = shop.area
                 分
-          .search__box--masks
+          .search__box--foods
             - shop.foods.each do |food|
-              .search__box--mask
-                .search__box--mask-image
+              .search__box--food
+                .search__box--food-image
                   - if food.image.url
                     = image_tag food.image.url
                   - else
                     .noimage__box--index
-                .search__box--mask-under
-                  .search__box--mask-name
+                .search__box--food-under
+                  .search__box--food-name
                     = food.name
-                  .search__box--mask-stock
+                  .search__box--food-price
                     在庫（箱）：
-                    %spam.search__box--mask-num
+                    %spam.search__box--food-num
                       = food.price

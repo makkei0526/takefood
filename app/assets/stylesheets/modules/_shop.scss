@@ -36,15 +36,15 @@
         font-weight: bold;
       }
     }
-    &--masks{
+    &--foods{
       width: 80%;
       margin: 20px auto;
       box-shadow: 0 0 8px $black;
-     background-color: #EEEEEE;
+      background-color: #EEEEEE;
       @include flex;
       flex-wrap: wrap;
       justify-content: center;
-      .mask-box{
+      .food-box{
         height: 100%;
         margin: 20px;
         box-shadow: inset 0 0 8px 0px $black;
@@ -71,7 +71,7 @@
         &--name{
           margin-bottom: 5px;
         }
-        &--stock{
+        &--price{
           font-size: 15px;
           margin-bottom: 5px;
         }
@@ -154,7 +154,7 @@
      color: $black;
    }
  }
- &--masks{
+ &--foods{
   scroll-snap-type: x mandatory;
   white-space: nowrap;
   overflow: auto;
@@ -184,7 +184,7 @@
       font-weight: bold;
       padding: 5px 0;
     }
-    &-stock{
+    &-price{
       padding-bottom: 5px;
     }
     &-num{
@@ -247,11 +247,11 @@
       }
     }
   }
- .shop__box--masks{
+ .shop__box--foods{
    width: 95%;
    display: block;
    padding: 5px 0;
-   & .mask-box{
+   & .food-box{
      width: calc(100% - 40px);
      &--stock{
        padding-bottom: 5px;
@@ -293,11 +293,11 @@
       font-size: 23px !important;
       text-shadow: 1px 1px 0px $black;
    }
-   &--masks{
+   &--foods{
      width: 100% !important;
      display: block !important;
    }
-   &--mask{
+   &--food{
      width: 100% !important;
      margin: 0  !important;
      

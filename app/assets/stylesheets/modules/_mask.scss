@@ -1,8 +1,8 @@
 
 
-.maskform{
+.foodform{
   margin-bottom: 100px;
-    #mask_image{
+    #food_image{
       display: none;
     }
     &__ja{
@@ -122,7 +122,7 @@
   }
   // スマホ用
   @media screen and (max-width: 480px){ 
-    .maskform__box{
+    .foodform__box{
       width: 95%;
       padding: 10px 20px;
       &--submit{
