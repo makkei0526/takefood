@@ -29,7 +29,7 @@
         margin-bottom: 15px;
       }
       &--submit{
-        background-color: $blue;
+        background-color: $red;
         color: $white;
         margin-bottom: 10px;
         @include shadow_btn;
@@ -49,7 +49,7 @@
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 5px 8px;
-    border: solid 1px $blue;
+    border: solid 1px $red;
     color: #666;
     position: relative;
     padding: 0;
@@ -80,7 +80,7 @@
     right: 15px;
   }
   #img_field:hover {
-    background-color: $blue;
+    background-color: $red;
     transition: 0.3s ease-out;
     opacity: 0.9;
   }
@@ -108,7 +108,7 @@
         padding-top: 100px;
       }
       &--success{
-      background-color:$blue;
+      background-color:$red;
       height: 50px;
       line-height: 50px;
       width: 300px;

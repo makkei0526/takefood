@@ -4,7 +4,7 @@
 }
 
 #main-content {
-  // opacity: 0;
+  opacity: 0;
 }
 
 .pace {
@@ -30,7 +30,7 @@
   font-weight: 100;
   font-size: 2em;
   font-family: 'Helvetica Neue', 'Yu Gothic', 'Meiryo', sans-serif;
-  color: $blue;
+  color: $red;
 }
 
 .pace.pace-inactive {
@@ -40,7 +40,7 @@
 .pace-progress-inner {
   width: 40px;
   height: 40px;
-  background-color: $blue;
+  background-color: $red;
   margin: 0 auto;
   animation: sk-rotateplane;
   animation-duration: 1.2s;

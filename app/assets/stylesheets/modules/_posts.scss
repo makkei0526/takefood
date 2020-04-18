@@ -11,7 +11,7 @@ header{
   @include flex-between();
   .findmask{
    font-size: 30px;
-   color: $blue;
+   color: $red;
    font-family: Roboto;
    &:hover{
      opacity: 0.8;
@@ -27,7 +27,7 @@ header{
     padding: 0 20px;
     color: $white;
     margin-left: 40px;
-    background-color: $blue;
+    background-color: $red;
     @include shadow_btn;
     }
     .gestbtn{
@@ -36,7 +36,7 @@ header{
   }
   .menu__btn{
     height: 50px;
-    background-color: $blue;
+    background-color: $red;
     color:$white;
     width: 160px;
     text-align: center;
@@ -57,7 +57,7 @@ header{
     margin-left: 0;
     margin-top: 0;
     padding: 0;
-    background: $blue;
+    background: $red;
     & li{
       width: 100%;
       & a{
@@ -65,7 +65,7 @@ header{
         color:$white;
         &:hover{
           background: $white;
-          color: $blue;
+          color: $red;
         }
       }
     }  
@@ -238,7 +238,7 @@ header{
   width: 100%;
   color: $black;
   &--date{
-    color: $blue;
+    color: $red;
     margin-right: 10px;
     font-weight: bold;
   }
@@ -277,7 +277,7 @@ header{
       width: 100%;
       margin: 10px 0;
       height: 40px;
-      background-color: $blue;
+      background-color: $red;
       @include shadow_btn;
       border-radius: 20px;
       color:$white;
@@ -286,7 +286,7 @@ header{
   }
 }
 footer {
-  color: $blue;
+  color: $red;
   p {
     text-align: center;
     margin: 30px 0;

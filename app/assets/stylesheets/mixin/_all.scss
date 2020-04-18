@@ -11,7 +11,7 @@
   position: absolute;
   top: 230px;
   left: 130px;
-  background: linear-gradient($blue, $white);
+  background: linear-gradient($red, $white);
   border-radius: 10px 20px 30px 40px;
   padding: 15px 20px;
   text-align: center;
@@ -31,7 +31,7 @@
   font-size: 40px;
     font-weight: bold;
     text-align: center;
-    color: $blue;
+    color: $red;
 }
 @mixin mainbox {
   width: 80%;
