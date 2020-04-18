@@ -23,29 +23,29 @@
         %span.space
         定休日：
         = @shop.shop_holiday
-    .shop__box--foods
-      - @foods.each do |food|
-        .food-box
-          .food-box--image
-            - if food.image.url
-              = image_tag food.image.url
-            - else
-              .noimage__box
-            - if shop_signed_in? && current_shop.id == food.shop.id
-              .food-box--destroy
-                = link_to food_path(food.id), method: :delete do
-                  %i.fas.fa-trash-alt
-          .food-box--under
-            .food-box--name
-              = food.name
-            .food-box--price
-              値段（円）：
-              = food.price
-            .food-box--date
-              %span
-                料理掲載日
-              %span
-                = food.created_at
+  .shop__box--foods
+    - @foods.each do |food|
+      .food-box
+        .food-box--image
+          - if food.image.url
+            = image_tag food.image.url
+          - else
+            .noimage__box
+          - if shop_signed_in? && current_shop.id == food.shop.id
+            .food-box--destroy
+              = link_to food_path(food.id), method: :delete do
+                %i.fas.fa-trash-alt
+        .food-box--under
+          .food-box--name
+            = food.name
+          .food-box--price
+            値段（円）：
+            = food.price
+          .food-box--date
+            %span
+              料理掲載日
+            %span
+              = food.created_at
 - if shop_signed_in? && current_shop.id == @shop.id
   .content__btns
     = link_to edit_shop_path(@shop.id) do
