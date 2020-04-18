@@ -4,7 +4,7 @@
   .search__ja
     検索結果
   = form_with url: search_shops_path, local: true, method: :get, class: "search-form"  do |f|
-    = f.text_field :keyword, placeholder: "お近くの駅付近でマスク在庫がある店舗をお探しします", class: "search-input"
+    = f.text_field :keyword, placeholder: "お近くの地域でテイクアウトができる店舗をお探しします", class: "search-input"
     = f.submit "検索", class: "search-btn"
   .search__mainbox
     - @shops.each do |shop|
@@ -17,9 +17,9 @@
               %hr
               .search__station
                 = shop.area
-                駅から徒歩
+                -# 駅から徒歩
                 -# = shop.area
-                分
+                -# 分
           .search__box--foods
             - shop.foods.each do |food|
               .search__box--food
@@ -32,6 +32,6 @@
                   .search__box--food-name
                     = food.name
                   .search__box--food-price
-                    在庫（箱）：
+                    値段（円）：
                     %spam.search__box--food-num
                       = food.price
