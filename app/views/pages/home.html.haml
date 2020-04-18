@@ -1,38 +1,91 @@
 
-.site-wrapper
-  .site-wrapper-inner
-    .cover-container
+-# .site-wrapper
+-#   .site-wrapper-inner
+-#     .cover-container
 
-      #background
+-#       #background
       
-      .inner.cover
-        %h1.cover-heading
-          TakeFood
-          %br
-            %h3 新型コロナウィルスの感染拡大により、全国の飲食店が経営的に厳しい状況にある中、存続のためにテイクアウトをはじめるお店が増えてきました。
-            そんな飲食店を応援することを目的に、テイクアウトの情報を少しでも多くの人に伝えるためのサービスとなっております。
-        %p.lead
-        %p.lead
-          = link_to "お店を登録する",  class: "btn btn-lg btn-secondary"
-          = link_to "テイクアウト最新情報をみる", posts_path, class: "btn btn-lg btn-secondary"
+-#       .inner.cover
+-#         %h1.cover-heading
+-#           TakeFood
+-#           %br
+-#             %h3 新型コロナウィルスの感染拡大により、全国の飲食店が経営的に厳しい状況にある中、存続のためにテイクアウトをはじめるお店が増えてきました。
+-#             そんな飲食店を応援することを目的に、テイクアウトの情報を少しでも多くの人に伝えるためのサービスとなっております。
+-#         %p.lead
+-#         %p.lead
+-#           = link_to "お店を登録する",  class: "btn btn-lg btn-secondary"
+-#           = link_to "テイクアウト最新情報をみる", posts_path, class: "btn btn-lg btn-secondary"
 
-    .posts#posts
-      .posts__en
-        NEW POSTS
-      .posts__ja
-        %div
-          新着情報 
-        %div
-          クリックするとお店の詳細ページにいけます
-      .posts__box#postslick
-        - @posts.each do |post|
-          = link_to shop_path(post.shop.id),class:"newShop__hover" do
-            .newpost__box
-              %span.newpost__box--date
-                = post.created_at
-              %span.newpost__box--name
-                = post.shop.name
-              %hr/
-              .newpost__box--content
-                = post.content
+-#     .posts#posts
+-#       .posts__en
+-#         NEW POSTS
+-#       .posts__ja
+-#         %div
+-#           新着情報 
+-#         %div
+-#           クリックするとお店の詳細ページにいけます
+-#       .posts__box#postslick
+-#         - @posts.each do |post|
+-#           = link_to shop_path(post.shop.id),class:"newShop__hover" do
+-#             .newpost__box
+-#               %span.newpost__box--date
+-#                 = post.created_at
+-#               %span.newpost__box--name
+-#                 = post.shop.name
+-#               %hr/
+-#               .newpost__box--content
+-#                 = post.content
+
+
+
+.topcontens
+  .topcontens__logo
+    TakeFood
+  .topcontens__right
+    %h1
+      テイクアウト可能なお店を探す
+    %h4
+      新型コロナウィルスの感染拡大によって経営困難になった
+      %br
+      飲食店を応援する
+    = link_to "#", class: "topcontens__right--btn" do
+      サービス案内
+.servise#servise
+  .servise__en
+    SERVICE
+  .servise__ja
+    サービスのご案内
+  .servise__images
+    = link_to shops_path do
+      .servise__images--left
+        .servise__images--left-box
+          %p Search
+          %hr
+          %div  お近くの地域からからテイクアウトできる、飲食店を検索します。
+    = link_to "#", class: "btn__newpost" do
+      .servise__images--right
+        .servise__images--right-box
+          %p Shop Post
+          %hr
+          %div 各飲食店のが投稿した最新テイクアウト情報などを見ることができます。
+
+.posts#posts
+  .posts__en
+    NEW POSTS
+  .posts__ja
+    %div
+      新着情報 
+    %div
+      クリックするとお店の詳細ページにいけます
+  .posts__box#postslick
+    - @posts.each do |post|
+      = link_to shop_path(post.shop.id),class:"newShop__hover" do
+        .newpost__box
+          %span.newpost__box--date
+            = post.created_at
+          %span.newpost__box--name
+            = post.shop.name
+          %hr/
+          .newpost__box--content
+            = post.content
 
