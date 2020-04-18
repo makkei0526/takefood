@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
+  post '/homes/guest_sign_in', to: 'homes#new_guest'
   devise_for :shops, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   
   root to: "posts#index"
-
 
   resources :foods, only: [:create,:destroy]
   resources :posts, only: [:index,:create]
