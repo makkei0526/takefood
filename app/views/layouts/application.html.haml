@@ -49,9 +49,9 @@
               %li.mobileVar
                 = link_to new_shop_session_path, class: "#" do
                   ログイン
-              -# %li.mobileVar
-              -#   = link_to homes_guest_sign_in_path, method: :post, class: "#" do
-              -#     ゲストログイン
+              %li.mobileVar
+                = link_to homes_guest_sign_in_path, method: :post, class: "#" do
+                  ゲストログイン
       .header__lists
         .header__lists--left
           飲食店の方はコチラ：
@@ -65,8 +65,8 @@
             新規登録
           = link_to new_shop_session_path, class: "login--btn" do    
             ログイン
-          -# = link_to homes_guest_sign_in_path, method: :post,class: "login--btn gestbtn" do    
-          -#   ゲストログイン(閲覧用)
+          = link_to homes_guest_sign_in_path, method: :post,class: "login--btn gestbtn" do    
+            ゲストログイン(閲覧用)
     #main-content
       = yield
       %footer
