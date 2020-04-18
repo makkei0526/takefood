@@ -1,0 +1,143 @@
+
+
+.maskform{
+  margin-bottom: 100px;
+    #mask_image{
+      display: none;
+    }
+    &__ja{
+    @include heading-japan;
+    }
+    &__en{
+    @include heading-english;
+    padding-top: 20px;
+    }
+    &__box{
+      width: 80%;
+      background-color: $white;
+      margin: 0 auto;
+      overflow: scroll;
+      padding: 30px 50px;
+      box-shadow: 0 0 8px $black;
+      input{
+        height: 40px;
+        width: 100%;
+        margin: 5px 0 0 0;
+        padding-left: 10px;
+      }
+      .field{
+        margin-bottom: 15px;
+      }
+      &--submit{
+        background-color: $blue;
+        color: $white;
+        margin-bottom: 10px;
+        @include shadow_btn;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .noimage__box--index{
+    height: 300px;
+    width: 400px;
+    background-image: url("noimage.jpg");
+    background-size: 100% 100%;
+  }
+  #img_field {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 5px 8px;
+    border: solid 1px $blue;
+    color: #666;
+    position: relative;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 400px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $white;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.3s ease-out;
+    text-align: center;
+  }
+  #img_field i {
+    font-size: 100px;
+    color: #aaa;
+    line-height: 250px;
+    transition: 0.3s ease-out;
+  }
+  #img_field i.add {
+    display: none;
+    font-size: 50px;
+    position: absolute;
+    top: -90px;
+    right: 15px;
+  }
+  #img_field:hover {
+    background-color: $blue;
+    transition: 0.3s ease-out;
+    opacity: 0.9;
+  }
+  #img_field:hover i {
+    transition: 0.3s ease-out;
+    display: block;
+    color: $white;
+  }
+  .preview{
+   height: 100%;
+  }
+  .image{
+    display: inline;
+  }
+  .done__low{
+    height: 100%;
+    margin: 150px;
+    .done__box{
+      height: 500px;
+      text-align: center;
+      margin: 20px 50px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+      &--font{
+        font-size: 30px;
+        padding-top: 100px;
+      }
+      &--success{
+      background-color:$blue;
+      height: 50px;
+      line-height: 50px;
+      width: 300px;
+      text-align: center;
+      margin: 100px auto;
+      color: $white;
+      border-radius: 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+      }
+    }
+  }
+  // スマホ用
+  @media screen and (max-width: 480px){ 
+    .maskform__box{
+      width: 95%;
+      padding: 10px 20px;
+      &--submit{
+        margin-bottom: 10px !important;
+      }
+    }
+    .done__low{
+      margin: 0;
+      padding-top: 10px;
+      & .done__box{
+        height: 700px;
+        &--success{
+          width: calc(100% - 20px) !important;
+          margin: 150px 10px;
+        }
+      }
+    }
+  }

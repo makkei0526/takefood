@@ -1,0 +1,414 @@
+header{
+  width: 100%;
+  height: 75px;
+  background-color:$white;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  padding: 0 50px;
+  line-height: 75px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  @include flex-between();
+  .findmask{
+   font-size: 30px;
+   color: $blue;
+   font-family: Roboto;
+   &:hover{
+     opacity: 0.8;
+   }
+  }
+  .header__lists{
+    @include flex();
+    justify-content: space-around;
+    height: 50px;
+    line-height: 50px;
+    margin: auto 0;
+    .signup--btn,.login--btn {
+    padding: 0 20px;
+    color: $white;
+    margin-left: 40px;
+    background-color: $blue;
+    @include shadow_btn;
+    }
+    .gestbtn{
+      background-color:$orange;
+    }
+  }
+  .menu__btn{
+    height: 50px;
+    background-color: $blue;
+    color:$white;
+    width: 160px;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    position: absolute;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    opacity: 0.6;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .dropdwn_menu{
+    width: 100%;
+    display: none;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+    background: $blue;
+    & li{
+      width: 100%;
+      & a{
+        display: block;
+        color:$white;
+        &:hover{
+          background: $white;
+          color: $blue;
+        }
+      }
+    }  
+  }
+}
+.topcontens{
+  background-size: cover;
+  height: 950px;
+  background-image: image-url("hand.jpg");
+  margin-top: 75px;
+  background-position: center;
+  &__logo{
+    color: $white;
+    font-size: 40px;
+    padding: 20px 80px;
+    opacity: 0;
+    animation: logo 5s, movecontent 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    font-family: Roboto;
+    box-shadow: inset 0 0 20px 5px ;
+    border: $white solid 1px;
+    text-shadow: 8px 6px 7px rgba(0, 0, 0, 0.4);
+   }
+  &__right{
+    position: absolute;
+    left: 70%;
+    bottom: 40%;
+    text-shadow: 8px 6px 3px rgba(0, 0, 0, 0.4);
+    h1{
+      color: $white;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: Sawarabi Mincho;
+    }
+    h4{
+      color: $white;
+      font-size: 15px;
+      font-weight: 200px;
+      margin-top: 20px;
+      font-family: Sawarabi Mincho;
+    }
+    &--btn{
+      border: solid 1px $white;
+      color: $white;
+      padding: 15px 80px;
+      text-decoration: none;
+      margin-top: 80px;
+      display: block;
+      font-family: Sawarabi Mincho;
+      &:hover{
+        transform: translate(-2.5px, -2.5px);
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+      }
+    }  
+  }
+}
+.servise{
+  background-color: $white;
+  padding: 90px 300px;
+  &__en{
+   @include heading-english();
+  }
+  &__ja{
+   @include heading-japan();
+  }
+  &__images{
+    @include flex-between();
+    &--left{
+      height: 300px;
+      width: 450px;
+      background-image: image-url("search.jpg");
+      background-size: 100% 100%;
+      position: relative;
+      @include shadow_btn;
+      &-box{
+      @include boxabsolute;
+      color: $black;
+      p{
+       @include box-design();
+      }
+      div{
+        color: $black;
+        margin-top: 10px;
+      }
+      }
+    }
+    &--right{
+      height: 300px;
+      width: 450px;
+      background-image: image-url("shop.jpg");
+      background-size: 100% 100%;
+      position: relative;
+      @include shadow_btn;
+      &-box{
+        @include boxabsolute;
+        color: $black;
+        p{
+          @include box-design();
+         }
+         div{
+           color: $black;
+           margin-top: 10px;
+         }
+      }
+    }
+  }
+}
+.secondservise{
+  margin: 50px 0;
+  &__images{
+    height: 300px;
+    width: 450px;
+    background-image: image-url("post2.jpg");
+    background-size: 100% 100%;
+    position: relative;
+    margin: 0 auto;
+    @include shadow_btn;
+    &--box{
+      @include boxabsolute;
+      color: $black;
+      p{
+        @include box-design();
+       }
+       div{
+         color: $black;
+         margin-top: 10px;
+       }
+    }
+  }
+}
+.posts{
+  padding-top:90px;
+  &__en{
+    @include heading-english();
+  }
+  &__ja{
+    @include heading-japan();
+    & :nth-child(1){
+      font-weight: 700;
+      font-size: 30px;
+    }
+    & :nth-child(2){
+      font-size: 15px;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+  }
+  &__box{
+    padding: 0 200px;
+    text-align: center;
+    .fa-arrow-circle-up{
+      font-size: 35px;
+      cursor: pointer;
+      border-radius: 50%;
+      @include shadow_btn;
+    }
+    .fa-arrow-circle-down{
+      font-size: 35px;
+      cursor: pointer;
+      border-radius: 50%;
+      @include shadow_btn;
+    }
+  } 
+}
+.newpost__box{
+  margin: 50px 0 !important;
+  text-align: center;
+  width: 100%;
+  color: $black;
+  &--date{
+    color: $blue;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  &--name{
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 100px;
+  }
+  &--content{
+    margin-top: 20px;
+  }
+}
+.newShop__hover{
+  &:hover{
+    opacity: 0.7;
+  }
+}
+.postform{
+  margin-bottom: 200px;
+  &__ja{
+  @include heading-japan;
+  }
+  &__en{
+  @include heading-english;
+  padding-top: 20px;
+  }
+  &__box{
+    @include mainbox;
+    &--area{
+      width: 100%;
+      height: 200px;
+      margin-top: 10px;
+      padding-left: 5px;
+    }
+    &--submit{
+      width: 100%;
+      margin: 10px 0;
+      height: 40px;
+      background-color: $blue;
+      @include shadow_btn;
+      border-radius: 20px;
+      color:$white;
+      cursor: pointer;
+    }
+  }
+}
+footer {
+  color: $blue;
+  p {
+    text-align: center;
+    margin: 30px 0;
+  }
+}
+.space{
+  margin: 0 10px;
+}
+// #小さいPc用
+@media screen and (max-width: 1582px) {
+  .servise{
+    padding: 90px 80px;
+
+  } 
+}
+// パソコン用
+@media screen and (min-width: 481px) {
+  .menu__btn{
+    left: 35px;
+    top: 105px;
+   }
+  .mobileVar{
+    display: none;
+  }
+  .topcontens{
+    position: relative;
+   &__logo{
+    @include moveanimation();
+   }
+ }
+}
+// スマホ用
+@media screen and (max-width: 480px){ 
+ header{
+   padding: 0 10px ;
+ }
+ .header__lists--left{
+  display: none;
+ }
+ .signup--btn{
+   display: none;
+ }
+ .login--btn{
+   display: none;
+ }
+ .menu__btn{
+  right: 10px;
+  top: 10px;
+ }
+ .mobileVar_black{
+   background-color: $black;
+ }
+ .topcontens{
+  position: relative;
+  height: 100vh;
+ &__logo{
+  @include moveanimation_mobile();
+  animation: logo_mobile 5s, movecontent_mobile 5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  padding: 10px 20px; 
+  font-size: 8vmin !important;
+ }
+ &__right{
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  & h1{
+    font-size: 6vmin !important;
+  }
+  &--btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 3.5vmin !important;
+    text-align: center;
+  }
+ }
+}
+.servise{
+  padding: 90px 0 0 0;
+  margin: 0 10px;
+  &__images{
+    display: block;
+    &--left{
+      width: 100%;
+      margin: 50px 0;
+      &-box{
+        width: auto;
+        top: 220px;
+      }
+    }
+    &--right{
+      width: 100%;
+      margin: 80px 0;
+      &-box{
+        width: auto;
+        top: 220px;
+      }
+    }
+  }
+}
+.secondservise {
+  margin: 50px 10px;
+  &__images{
+    width: 100%;
+    &--box{
+      width: auto;
+    }
+  }
+}
+.posts__box{
+  padding: 0 10px;
+}
+.newpost__box--date{
+ display: none;
+}
+.newpost__box--name{
+    font-size: 18px !important;
+    margin-right: 0 !important;
+}
+.postform__box{
+  padding: 10px 20px;
+  width: 95%;
+}
+}

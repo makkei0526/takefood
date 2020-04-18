@@ -10,4 +10,13 @@ class Shop < ApplicationRecord
          has_many :foods
          has_many :posts
 
+
+         def self.search(search)
+          if search
+            Shop.where('area LIKE(?)', "%#{search}%")
+          else
+            Shop.all
+          end
+        end
+
 end

@@ -1,0 +1,37 @@
+.search__row
+  .search__en
+    Searched
+  .search__ja
+    検索結果
+  = form_with url: search_shops_path, local: true, method: :get, class: "search-form"  do |f|
+    = f.text_field :keyword, placeholder: "お近くの駅付近でマスク在庫がある店舗をお探しします", class: "search-input"
+    = f.submit "検索", class: "search-btn"
+  .search__mainbox
+    - @shops.each do |shop|
+      - if shop.name && shop.foods.length >= 1 
+        .search__box
+          .search__box--contens
+            = link_to shop_path(shop.id) do
+              .search__name
+                = shop.name
+              %hr
+              .search__station
+                = shop.area
+                駅から徒歩
+                -# = shop.area
+                分
+          .search__box--masks
+            - shop.foods.each do |food|
+              .search__box--mask
+                .search__box--mask-image
+                  - if food.image.url
+                    = image_tag food.image.url
+                  - else
+                    .noimage__box--index
+                .search__box--mask-under
+                  .search__box--mask-name
+                    = food.name
+                  .search__box--mask-stock
+                    在庫（箱）：
+                    %spam.search__box--mask-num
+                      = food.price

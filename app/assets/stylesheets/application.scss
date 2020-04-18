@@ -1,9 +1,15 @@
-@import "bootstrap";
-@import "modules/pages";
+@import "reset";
+@import "config/variable";
 @import "mixin/all";
+@import "mixin/animation";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sawarabi+Mincho&display=swap');
+@import "modules/pace.scss";
+@import "modules/shop";
+@import "modules/posts";
 @import "modules/devise";
+@import "modules/mask";
+@import "modules/comment";
 @import "modules/flash.scss";
-@import "modules/shop.scss";
-
+@import "modules/slick-theme";

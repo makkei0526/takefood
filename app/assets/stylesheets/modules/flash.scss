@@ -1,6 +1,6 @@
 .notification {
   .notice {
-    background-color:  #FF3333;
+    background-color: $blue;
     color: $white;
     text-align: center;
     float:left ;
@@ -9,7 +9,7 @@
     line-height: 30px;
   }
   .alert {
-    background-color:  #FF3333;
+    background-color: $blue;
     color: $white;
     text-align: center;
     float: left;
