@@ -11,7 +11,7 @@ jobs:
        MYSQL_ALLOW_EMPTY_PASSWORD: true
        MYSQL_ROOT_HOST: '%'
        MYSQL_USER: root
-   working_directory: ~/circleci-example-for-rails
+   working_directory: ~/takefood
    steps:
    - checkout
    - restore_cache:
