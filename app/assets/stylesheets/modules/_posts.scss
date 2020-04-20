@@ -9,7 +9,7 @@ header{
   line-height: 75px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
   @include flex-between();
-  .findmask{
+  .takefoodk{
    font-size: 30px;
    color: $red;
    font-family: Roboto;
@@ -180,7 +180,7 @@ header{
   &__images{
     height: 300px;
     width: 450px;
-    background-image: image-url("post2.jpg");
+    background-image: image-url("board.jpg");
     background-size: 100% 100%;
     position: relative;
     margin: 0 auto;

@@ -2,6 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width,initial-scale=1.0", :name => "viewport"}
     %title Takefood
     = csrf_meta_tags
     = csp_meta_tag
@@ -12,7 +13,7 @@
   %body
     = render 'layouts/notifications'
     %header
-      = link_to root_path , class: "findmask" do
+      = link_to root_path , class: "takefoodk" do
         Take  Food
       %ul.dropdwn
         %li.menu__btn
