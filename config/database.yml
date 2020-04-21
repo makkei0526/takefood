@@ -43,8 +43,16 @@ test:
  <<: *default
  database: docker_example_for_rails_test
 production:
- <<: *default
- database: docker_example_for_rails_production
+  <<: *default
+  host: <%= Rails.application.credentials.rds[:host] %>
+  database: <%= Rails.application.credentials.rds[:database] %>
+  username: <%= Rails.application.credentials.rds[:username] %>
+  password: <%= Rails.application.credentials.rds[:password] %>
+
+
+# production:
+#  <<: *default
+#  database: docker_example_for_rails_production
 
 
 # コメントアウト
