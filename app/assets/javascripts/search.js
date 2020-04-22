@@ -35,7 +35,7 @@ document.addEventListener("turbolinks:load", function() {
     ${name}
     </div>
     <div class="search__box--food-price">
-    在庫（箱）：
+    値段（円）：
     <spam class="search__box--food-num">
     ${price}
     </spam>
