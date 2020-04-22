@@ -8,58 +8,56 @@ document.addEventListener("turbolinks:load", function() {
     ${shop.shopname}
     </div>
     <hr>
-    <div class="search__station">
-    ${shop.station}
-    駅から徒歩
-    ${shop.station_walk}
-    分
+    <div class="search__area">
+    ${shop.area}
+    
     </div>
     </a></div>
-    <div class="search__box--masks search__box--masks${shop.id}">
+    <div class="search__box--foods search__box--foods${shop.id}">
     </div>
     </div>`
     search_list.append(html);
   }
 
-  function appendmask(mask,id){
-    var apennding = ".search__box--masks" + id;
+  function appendfood(food,id){
+    var apennding = ".search__box--foods" + id;
 
-  if (mask.image.url){
-    var name = mask.name
-    var img = mask.image.url
-    var stock = mask.stock
-    var html = `<div class="search__box--mask">
-    <div class="search__box--mask-image">
+  if (food.image.url){
+    var name = food.name
+    var img = food.image.url
+    var price = food.price
+    var html = `<div class="search__box--food">
+    <div class="search__box--food-image">
     <img src="${img}">
     </div>
-    <div class="search__box--mask-under">
-    <div class="search__box--mask-name">
+    <div class="search__box--food-under">
+    <div class="search__box--food-name">
     ${name}
     </div>
-    <div class="search__box--mask-stock">
+    <div class="search__box--food-price">
     在庫（箱）：
-    <spam class="search__box--mask-num">
-    ${stock}
+    <spam class="search__box--food-num">
+    ${price}
     </spam>
     </div>
     </div>
     </div>`
       $(apennding).append(html)
   } else {
-    var name = mask.name
-    var stock = mask.stock
-    var html = `<div class="search__box--mask">
-    <div class="search__box--mask-image">
+    var name = food.name
+    var price = food.price
+    var html = `<div class="search__box--food">
+    <div class="search__box--food-image">
     <div class="noimage__box--index"></div>
     </div>
-    <div class="search__box--mask-under">
-    <div class="search__box--mask-name">
+    <div class="search__box--food-under">
+    <div class="search__box--food-name">
     ${name}
     </div>
-    <div class="search__box--mask-stock">
-    在庫（箱）：
-    <spam class="search__box--mask-num">
-    ${stock}
+    <div class="search__box--food-price">
+    値段（円）：
+    <spam class="search__box--food-num">
+    ${price}
     </spam>
     </div>
     </div>
@@ -69,7 +67,7 @@ document.addEventListener("turbolinks:load", function() {
 }
 
 function appendErrMsgToHTML(msg) {
-  var html = `<div class='name'>"${ msg }"駅の徒歩圏内で在庫があるお店が見つかりませんでした。</div>`
+  var html = `<div class='name'>"${ msg }"エリアの近くででテイクアウトができるお店が見つかりませんでした。</div>`
   search_list.append(html);
 }
 
@@ -86,8 +84,8 @@ function appendErrMsgToHTML(msg) {
       if (shops.length !== 0) {
         shops.forEach(function(shop){
           appendShop(shop);
-          shop.masks.forEach(function(mask){
-            appendmask(mask,shop.id);
+          shop.foods.forEach(function(food){
+            appendfood(food,shop.id);
           })
         });
       }
