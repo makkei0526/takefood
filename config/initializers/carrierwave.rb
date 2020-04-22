@@ -1,3 +1,6 @@
+require 'carrierwave/storage/abstract'
+require 'carrierwave/storage/file'
+require 'carrierwave/storage/fog'
 
 
 unless Rails.env.development? || Rails.env.test?
@@ -11,6 +14,7 @@ unless Rails.env.development? || Rails.env.test?
 
     config.fog_directory  = ENV.fetch('S3_BUCKET_NAME')
     config.cache_storage = :fog
+    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/takefood'
   end
 end
 
