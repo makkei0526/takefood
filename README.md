@@ -6,8 +6,10 @@ https://app.takefood.work/
 画面上部のゲストログインボタンから、【ゲストユーザー】としてログインできます。
 
 # レスポンシブデザイン
-![IMG_0717](https://user-images.githubusercontent.com/61016123/79946943-e8e7c980-84ab-11ea-89a9-55f2226bfa44.PNG)
 
+<div align="center">
+<img width="400" alt="スクリーンショット 2020-04-22 10 31 18" src="https://user-images.githubusercontent.com/61016123/79946943-e8e7c980-84ab-11ea-89a9-55f2226bfa44.PNG">
+</div>
 
 # サービス概要
   コロナウィルスの影響で
