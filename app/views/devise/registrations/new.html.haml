@@ -30,8 +30,8 @@
       .field.image
         = f.label 'お店の外観写真'
         #img_field{onclick: "$('#file').click()"}
-          - if @shop.image.present?
-            = image_tag(@shop.image)
+          - if @shop.image.url.present?
+            = image_tag(@shop.image.url)
           - else
             %i.fas.fa-image
             %i.fas.fa-file-upload.add
