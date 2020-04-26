@@ -85,7 +85,7 @@ https://app.takefood.work/
   issueにまとめております
 
   https://github.com/makkei0526/takefood/issues
-  
+
   ## なぜこのアプリを作ろうと思った？
   実際に自分の周りにコロナの影響でお店に人が来ないから、テイクアウトを始めたんだけど広める方法がわからないという問題があったので、  
   それを解決するべく、テイクアウトを始めことを広め、ユーザーが近くの地域からそれを探せるアプリを作ろうと思いました。
@@ -95,8 +95,7 @@ https://app.takefood.work/
   ユーザーにストレスのないUI.UXを実装するのを心がけた点です。   
   特にアプリのロード中は、一番ストレスを与えやすい場面だと思うので、%表示でロードが可視化してわかるように実装いたしました。
 
-
-  ![demo](https://gyazo.com/a5fe06410196a8ba6c8299fff5c424e8/raw)
+  [![Image from Gyazo](https://i.gyazo.com/a5fe06410196a8ba6c8299fff5c424e8.gif)](https://gyazo.com/a5fe06410196a8ba6c8299fff5c424e8)
 
   ## 作る上で苦労した点、どうやって乗り越えたか
   開発環境にDockerを用いてエラーが多発した点で苦労しました。    
