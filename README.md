@@ -95,7 +95,7 @@ https://app.takefood.work/
   ユーザーにストレスのないUI.UXを実装するのを心がけた点です。   
   特にアプリのロード中は、一番ストレスを与えやすい場面だと思うので、%表示でロードが可視化してわかるように実装いたしました。
 
-  <a href="https://gyazo.com/a5fe06410196a8ba6c8299fff5c424e8"><img src="https://i.gyazo.com/a5fe06410196a8ba6c8299fff5c424e8.gif" alt="Image from Gyazo" width="1000"/></a>
+  <img src="https://i.gyazo.com/a5fe06410196a8ba6c8299fff5c424e8.gif" alt="Image from Gyazo" width="1000"/>
 
 
 
