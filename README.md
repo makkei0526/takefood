@@ -96,9 +96,8 @@ https://github.com/makkei0526/takefood/issues
 特にアプリのロード中は、一番ストレスを与えやすい場面だと思うので、%表示でロードが可視化してわかるように実装いたしました。
 
 
-![image](https://user-images.githubusercontent.com/61016123/80302643-2c14a600-87e6-11ea-95bf-bdf2e31d2426.png)
 
-
+![demo](https://gyazo.com/a5fe06410196a8ba6c8299fff5c424e8/raw)
 
 ## 作る上で苦労した点、どうやって乗り越えたか
 開発環境にDockerを用いてエラーが多発した点で苦労しました。    
