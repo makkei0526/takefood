@@ -21,7 +21,7 @@ services:
        bundle exec rails s -p 4000 -b '0.0.0.0'
      "
    ports:
-     - "http://18.181.129.222:4000"
+     - "http://18.181.129.222:4000:4000"
    volumes:
      - .:/docker_example_for_rails
      - "bundle:/usr/local/bundle"
